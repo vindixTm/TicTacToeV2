@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;align-items: center;
+    background-color: #F0F0F0;
+    font-family: "Capriola", sans-serif;
+  
+
+}
+.header{
+    width: 100vw;
+    height: 127px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;  
+    margin-bottom: 80px;
+}
+
+.logo{
+    font-size: 52px;
+}
+.turn_display{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.main_content{
+    width: 100vw;
+    height: 462.4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 45px;
+
+}
+.turn_text{
+    width: 110.95px;
+    height: 29.2px;
+    font-size: 36.53px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-shadow: -2.72px 3.15px 4.17px rgba(0, 0, 0, 0.25);
+}
+.turn_symbol{
+    filter: drop-shadow(-2px 4px 4px rgb(0 0 0 / 0.4));
+}
+.player_name{
+    width: 240px;
+    height: 46px;
+    border-radius: 10px;
+    margin-bottom: 26px;
+    background-color: rgba(217, 217, 217, 1);
+    box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.25) ;
+    display: flex;
+    align-items: center;
+    /* font-family: "Lexend Deca", sans-serif; */
+    font-size: 27.79px;
+
+}
+.player_name_text{
+    margin-left: 7px;
+}
+.player_symbol{
+    margin-bottom: 25px;
+}
+.name_change_icon{
+    width: 52px;
+    height: 46px;
+    background-color: rgba(98, 120, 102, 1);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+.score_board{
+    display: grid;
+    grid-template-rows: 100px 100px 229px;
+    justify-items: center;
+}
+.score{
+    height: 229px;
+    font-family: "Capriola", sans-serif;
+    font-size: 183px;
+}
+.board{
+    width: 462.4px;
+    height: 462.4px;
+    background-color: rgba(127, 155, 145, 1);
+    border-radius: 20px;
+    margin: 0 89px 0 89px;
+    box-shadow: -12px 12px 26px rgba(0, 0, 0, 0.25) ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 30px
+}
+
+.cell {
+    border: #F0F0F0 solid 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+    border-left-color: rgba(127, 155, 145, 1);
+
+}
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3) {
+    border-top-color: rgba(127, 155, 145, 1);
+}
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+    border-bottom-color: rgba(127, 155, 145, 1);
+}
+.cell:nth-child(3n) {
+    border-right-color: rgba(127, 155, 145, 1);
+}
+.restart{
+    width: 66px;
+    height: 66px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(98, 120, 102, 1);
+    box-shadow: -4px 4px 5px  rgba(0, 0, 0, 0.25);
+}
+.bottom_image{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.background_blur{
+    display: flex;
+    align-items: center;justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(110, 127, 113, 0.42);
+    backdrop-filter: blur(8px);
+}
+.omedetou{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 328px;
+    background-color: rgba(127, 155, 145, 1);
+    color: #F0F0F0;
+}
+.btn{
+    width: 218px;
+    height: 79px;
+    border-radius: 10px;
+}
+.buttons{
+    display: flex;
+    gap: 31px;
+    margin-top: 20px;
+}
+.winner_text,.omedetou_text,.player_name,.buttons{
+    font-family: "Lexend Deca", sans-serif;
+}
+.omedetou_text{
+    font-size: 21px;
+    letter-spacing: 17px;
+}
+.winner_text{
+    display: flex;
+    align-items: center;justify-content: center;
+    gap: 20px;
+    font-size: 46px;
+    letter-spacing: 10px;
+    margin-top: 22px;
+}
+.winner_text>img{
+    margin-top: 12px;
+}
+.end_match,.next_round{
+    display: flex;
+    align-items: center;justify-content: center;
+}
+.end_match{
+    border: 1px solid rgba(36, 55, 48, 1) ;
+    color: rgba(36, 55, 48, 1);
+}
+.next_round{
+    background-color: rgba(34, 112, 83, 1);
+    box-shadow: -4px 4px 5px  rgba(0, 0, 0, 0.25);
+}
